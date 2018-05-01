@@ -36,7 +36,8 @@ Edit the "results=" line to point to a location where you'd like the results to 
 
 Make the script executable and launch away..
 
-Use your favourite statistics package to analyse the reults. For now, I'd recommend octave (www.octave.org).
+Use your favourite statistics package to analyse the reults. 
+
 
 
 CREDITS
