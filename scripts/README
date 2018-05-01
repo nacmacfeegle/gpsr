@@ -1,0 +1,23 @@
+Included in this diretory are some scripts for gathering summary 
+statistics from results obtained from gpsr runs. 
+
+The files gather_stats.m and create_cps.m require GNU octave.
+Their associated .sh files are wrappers for running the statistics
+operations from the command line.
+
+For example, if you have performed 30 runs of gpsr and each results
+file has the form resX (where X is 01..30) then you can use the provided
+scripts as follows:
+
+prompt$ cat res?? > all_results.dat
+
+prompt$ ./dostats.sh 30 101
+
+In the above example, 30 refers to the number of runs carried out and 101
+to the total number of generations (e.g. 0 .. 100). The output of the above
+is the mean training and testing performance of the runs (with errors included
+to provide errorbar plots)
+
+The script "docps.sh" can be used to calculate the cumulative probability of
+success (used similarly to above, it assumes that the "hits percentage" from
+training is in the 4th column of a file called all_results.dat). 
