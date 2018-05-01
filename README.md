@@ -11,13 +11,13 @@ gpsr
 
 This will give you very short intro which describes how the program should be run.
 
-Quick start:
+Quick start
 ------------
 
 To get cracking with a batch of 30 runs of GP on a very well known symbolic regression problem
 (quartic polynomial), copy the following into a bash script:
 
----- begin bash script ----
+```
 #!/bin/bash
 
 GP=./bin/gpsr				
@@ -30,7 +30,7 @@ for i in `seq -w $NUMRUNS`
 do
         $GP -d $TRAINFILE -f $TESTFILE -o $RESULTS/best$i -O $RESULTS/res$i
 done
----- end bash script ----
+```
 
 Edit the "results=" line to point to a location where you'd like the results to reside
 
@@ -39,7 +39,7 @@ Make the script executable and launch away..
 Use your favourite statistics package to analyse the reults. For now, I'd recommend octave (www.octave.org).
 
 
-CREDITS:
+CREDITS
 -------
 This code would not have been written had I not first been introduced to a much faster system called
 FastSR, implemented by Maarten Keijzer. Maarten was kind enough to share his code with me and much of
